@@ -2,24 +2,34 @@
   "name": "dashboard-ptfi-be",
   "version": "0.0.0",
   "description": "Dashboard PTFI Backend",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Muhammad Oktoluqman Fakhrianto <dimas.oktoluqman@gmail.com>",
   "license": "ISC",
+  "keywords": [
+    "Node",
+    "Express",
+    "Typescript",
+    "Dashboard PTFI"
+  ],
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^22.7.4",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.6.2"
   }
 }
