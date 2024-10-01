@@ -21,7 +21,6 @@ export const authMiddleware = (
     return errorResponse(res, "Null authorization token.", null, 401);
 
   verifyAccessToken(token, (err: any, user: any) => {
-    console.log(err)
     if (err) {
       return errorResponse(res, "Invalid authorization token", null, 403);
     }

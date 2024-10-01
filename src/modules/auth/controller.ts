@@ -13,7 +13,6 @@ router.post(
   body("password").notEmpty(),
   (req: Request, res: Response) => {
     try {
-      // console.log(req.body);
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return errorResponse(res, "validation error", errors.array());
