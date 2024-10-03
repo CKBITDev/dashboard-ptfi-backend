@@ -9,13 +9,13 @@ const router = Router();
 
 router.post(
   "/login",
-  body("user_id").notEmpty(),
-  body("password").notEmpty(),
+  body("user_id").notEmpty().withMessage("User ID is required"),
+  body("password").notEmpty().withMessage("Password is required"),
   (req: Request, res: Response) => {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return errorResponse(res, "validation error", errors.array());
+        return errorResponse(res, "Validation error", errors.array());
       }
       const data = matchedData(req);
 
